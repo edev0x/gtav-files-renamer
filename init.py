@@ -2,7 +2,7 @@ import os
 import shutil
 import re
 
-class AudioRenameProcessor:
+class FileRenameProcessor:
     def __init__(self, input_dir, ref_dir, output_dir):
         self.input_dir = input_dir
         self.ref_dir = ref_dir
@@ -32,7 +32,7 @@ class AudioRenameProcessor:
         for match in matches:
             target_file = os.path.join(self.output_dir, f"{match}.mp3")
             shutil.copyfile(source_file, target_file)
-            print(f"Archivo creado: {target_file}")
+            print(f"Created file: {target_file}")
 
     def process_files(self):
         # Process all files in input directory
@@ -64,10 +64,10 @@ class AudioRenameProcessor:
     
 if __name__ == "__main__":
     # Define directories
-    input_dir = "audios/to-convert"
-    reference_dir = "audios/originals/reference"
-    output_dir = "audios/converted"
+    input_dir = "audios/to-convert" # Directory with files to convert
+    reference_dir = "audios/originals/reference" # Directory with reference files
+    output_dir = "audios/converted" # Directory to save the converted files
 
     # Initialize processor
-    converter = AudioRenameProcessor(input_dir, reference_dir, output_dir)
+    converter = FileRenameProcessor(input_dir, reference_dir, output_dir)
     converter.process_files()
