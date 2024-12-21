@@ -18,7 +18,7 @@
 
 1. Clone the repository:
     ```sh
-    git clone https://github.com/yourusername/gtav-files-renamer.git
+    git clone https://github.com/edev0x/gtav-files-renamer.git
     ```
 2. Navigate to the project directory:
     ```sh

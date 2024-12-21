@@ -54,7 +54,7 @@ class FileRenameProcessor:
             self.copy_files(filename, matches)
             total_processed += 1
         
-        # Resumen del proceso
+        # Process summary
         print("\nProcess summary:")
         print(f"Total of processed files: {total_processed}")
         print(f"Total of references: {len(reference_files)}")
